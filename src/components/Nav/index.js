@@ -18,7 +18,7 @@ function Nav(props) {
     <header className="flex-row px-1">
       <h2>
         <a data-testid="link" href="/">
-          <span role="img" aria-label="camera"> 📸</span> Oh Snap!
+   Jennifer Hano
         </a>
       </h2>
       <nav>
@@ -31,7 +31,18 @@ function Nav(props) {
           <li className={`mx-2 ${contactSelected && 'navActive'}`}>
             <span onClick={() => setContactSelected(true)}>Contact</span>
           </li>
-          {categories.map((category) => (
+          <li className="mx-2">
+            <a data-testid="portfolio" href="#portfolio" onClick={() => setContactSelected(false)}>
+            Portfolio
+            </a>
+            </li>
+          
+            <li className="mx-2">
+            <a data-testid="about" href="#about" onClick={() => setContactSelected(false)}>
+           Resume
+            </a>
+            </li>
+          {/* {categories.map((category) => (
             <li
               className={`mx-1 ${
                 currentCategory.name === category.name && !contactSelected && 'navActive'
@@ -47,7 +58,7 @@ function Nav(props) {
                 {capitalizeFirstLetter(category.name)}
               </span>
             </li>
-          ))}
+           ))}  */}
         </ul>
       </nav>
     </header>

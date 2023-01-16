@@ -1,5 +1,5 @@
 import React from 'react';
-import coverImage from '../../assets/cover/cover-image.jpg';
+import coverImage from '../../assets/cover/hero-img.jpg';
 function About() {
   return (
     <section className="my-5">
@@ -7,13 +7,7 @@ function About() {
       <img src={coverImage} className="my-2" style={{ width: "100%" }} alt="cover" />
       <div className="my-2">
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec bibendum turpis sed ex
-          condimentum molestie. Mauris condimentum lectus ut ornare dignissim. Mauris faucibus urna
-          mi, ac feugiat metus aliquam maximus. Proin aliquam justo nec diam vulputate vestibulum.
-          Aenean sollicitudin nulla at nisi ornare, nec suscipit massa eleifend. Morbi tristique
-          justo vel turpis sollicitudin, et tristique velit convallis. In hac habitasse platea
-          dictumst. Phasellus mattis nunc sed orci consequat laoreet. Praesent id nisl nibh.
-          Curabitur imperdiet ultricies mollis. In hac habitasse platea dictumst.
+Jennifer is a Developer and Designer who has been working in the tech industry for the past five years. Always working along side developers within Human Resources, she wanted to get a taste for it for herself, and to know what they are even talking about. Hence taking this class! Jen lives in NYC on the Upper West Side and has been there the past 12 years. In her spare time she travels everywhere possible and scuba dives at some of the worlds best locations whenever she can. 
         </p>
       </div>
     </section>
