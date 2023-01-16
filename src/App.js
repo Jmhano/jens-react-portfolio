@@ -1,23 +1,21 @@
-import React, { useState } from 'react';
-import Nav from './components/Nav';
-import About from './components/About';
-import ContactForm from './components/Contact';
-import Portfolio from './components/Portfolio';
+import React, { useState } from "react";
+import Nav from "./components/Nav";
+import About from "./components/About";
+import ContactForm from "./components/Contact";
+import Portfolio from "./components/Portfolio";
 
 function App() {
   const [categories] = useState([
     {
-      name: 'commercial',
-      description: 'Photos of grocery stores, food trucks, and other commercial projects',
+      name: "portfolio",
+      description: "Check out some of the projects I have worked on",
     },
-    { name: 'portraits', description: 'Portraits of people in my life' },
-    { name: 'food', description: 'Delicious delicacies' },
-    { name: 'landscape', description: 'Fields, farmhouses, waterfalls, and the beauty of nature' },
   ]);
 
   const [currentCategory, setCurrentCategory] = useState(categories[0]);
 
   const [contactSelected, setContactSelected] = useState(false);
+  const [portfolioSelected, setPortfolioSelected] = useState(false);
 
   return (
     <div>
@@ -27,21 +25,36 @@ function App() {
         currentCategory={currentCategory}
         contactSelected={contactSelected}
         setContactSelected={setContactSelected}
+        portfolioSelected={portfolioSelected}
+        setPortfolioSelected={setPortfolioSelected}
       ></Nav>
       <main>
-        {!contactSelected ? (
+        {!contactSelected && !portfolioSelected ? (
           <>
-          <Portfolio></Portfolio>
             <About></About>
           </>
         ) : (
-          <ContactForm></ContactForm>
+          ""
+        )}
+
+        {contactSelected ? (
+          <>
+            <ContactForm />
+          </>
+        ) : (
+          ""
+        )}
+
+        {portfolioSelected ? (
+          <>
+            <Portfolio />
+          </>
+        ) : (
+          ""
         )}
       </main>
 
-      <footer>
-        <a>testing</a>
-      </footer>
+      <footer></footer>
     </div>
   );
 }
