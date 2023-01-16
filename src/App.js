@@ -14,7 +14,6 @@ function App() {
   ]);
 
   const [currentCategory, setCurrentCategory] = useState(categories[0]);
-
   const [contactSelected, setContactSelected] = useState(false);
   const [portfolioSelected, setPortfolioSelected] = useState(false);
   const [resumeSelected, setResumeSelected] = useState(false);
@@ -64,9 +63,13 @@ function App() {
         ) : (
           ""
         )}
-      </main>
 
-      <footer></footer>
+        <footer>
+          <a href="https://www.linkedin.com/in/jennifer-hano/">LinkedIn</a>
+          <a href="https://github.com/Jmhano/">Github</a>
+          <a href="https://twitter.com/">Twitter</a>
+        </footer>
+      </main>
     </div>
   );
 }
