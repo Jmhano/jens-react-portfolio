@@ -8,6 +8,8 @@ function Nav(props) {
     currentCategory,
     setContactSelected,
     setPortfolioSelected,
+    resumeSelected,
+    setResumeSelected,
   } = props;
 
   useEffect(() => {
@@ -15,17 +17,26 @@ function Nav(props) {
   }, [currentCategory]);
 
   const clickEventHandler = (event) => {
-    if ((event.target.id === "about")) {
+    if (event.target.id === "about") {
       setContactSelected(false);
       setPortfolioSelected(false);
+      setResumeSelected(false);
     }
-    if ((event.target.id === "contact")) {
+    if (event.target.id === "contact") {
       setContactSelected(true);
       setPortfolioSelected(false);
+      setResumeSelected(false);
     }
-    if ((event.target.id === "portfolio")) {
+    if (event.target.id === "portfolio") {
       setContactSelected(false);
       setPortfolioSelected(true);
+      setResumeSelected(false);
+    }
+
+    if (event.target.id === "resume") {
+      setContactSelected(false);
+      setPortfolioSelected(false);
+      setResumeSelected(true);
     }
   };
   return (
@@ -50,6 +61,12 @@ function Nav(props) {
           <li className={`mx-2 ${portfolioSelected && "navActive"}`}>
             <span id="portfolio" onClick={clickEventHandler}>
               Portfolio
+            </span>
+          </li>
+
+          <li className={`mx-2 ${resumeSelected && "navActive"}`}>
+            <span id="resume" onClick={clickEventHandler}>
+              Resume
             </span>
           </li>
 
